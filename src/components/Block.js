@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
 const Block = ({children, flex, center, middle, style, ...props}) => {
   const blockStyles = [
@@ -7,6 +7,7 @@ const Block = ({children, flex, center, middle, style, ...props}) => {
     flex && {flex},
     center && styles.center,
     middle && styles.middle,
+    style,
   ];
   return (
     <View style={blockStyles} {...props}>
