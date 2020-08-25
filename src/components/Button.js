@@ -6,7 +6,10 @@ const {width} = Dimensions.get('window');
 const Button = ({children, opacity, full, style, ...props}) => {
   const buttonStyles = [styles.button, full && styles.full, style];
   return (
-    <TouchableOpacity style={buttonStyles} activeOpacity={opacity} {...props}>
+    <TouchableOpacity
+      style={buttonStyles}
+      activeOpacity={opacity || 0.8}
+      {...props}>
       {children}
     </TouchableOpacity>
   );
@@ -18,7 +21,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#2E5BFF',
     borderRadius: 4,
-    height: 50,
+    height: 55,
     paddingVertical: 10,
     alignItems: 'center',
     justifyContent: 'center',

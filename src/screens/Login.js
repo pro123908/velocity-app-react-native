@@ -33,7 +33,17 @@ const Login = () => {
           <Block center flex={0} style={{marginTop: 40}}>
             <Input marginBottom={20} label="Email Address" full email />
 
-            <Input marginBottom={25} label="Password" password full />
+            <Input
+              marginBottom={25}
+              label="Password"
+              password
+              full
+              rightLabel={
+                <Text color="#8798AD" height={22}>
+                  Forgot password?
+                </Text>
+              }
+            />
             <Button onPress={() => {}} full style={{marginBottom: 10}}>
               <Text size={21} spacing={0} weight="bold" color="white">
                 Sign In

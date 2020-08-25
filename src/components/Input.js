@@ -6,6 +6,7 @@ const {width} = Dimensions.get('window');
 
 const Input = ({
   label,
+  rightLabel,
   style,
   email,
   phone,
@@ -32,15 +33,18 @@ const Input = ({
 
   return (
     <View>
-      <Text
-        height={14}
-        weight={'700'}
-        style={styles.label}
-        size={12}
-        spacing={1.12}
-        color="#B0BAC9">
-        {label}
-      </Text>
+      <View style={styles.labelContainer}>
+        <Text
+          height={14}
+          weight={'bold'}
+          style={styles.label}
+          size={12}
+          spacing={1.12}
+          color="#B0BAC9">
+          {label}
+        </Text>
+        {rightLabel}
+      </View>
       <TextInput
         style={inputStyles}
         secureTextEntry={password}
@@ -58,12 +62,12 @@ export default Input;
 const styles = StyleSheet.create({
   input: {
     backgroundColor: 'rgba(224, 231, 255, 0.2)',
-    borderWidth: 1,
+    borderWidth: 0.5,
     borderColor: '#E0E7FF',
     borderRadius: 5,
     fontSize: 15,
     color: '#2E384D',
-    height: 40,
+    height: 45,
     paddingVertical: 11,
     paddingHorizontal: 16,
   },
@@ -73,5 +77,10 @@ const styles = StyleSheet.create({
 
   full: {
     width: width - 50,
+  },
+  labelContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 8,
   },
 });
