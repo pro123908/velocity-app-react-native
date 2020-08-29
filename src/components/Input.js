@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, TextInput, View, Dimensions} from 'react-native';
 import Text from './Text';
+import * as theme from '../constants/theme';
 
 const {width} = Dimensions.get('window');
 
@@ -35,12 +36,15 @@ const Input = ({
     <View>
       <View style={styles.labelContainer}>
         <Text
-          height={14}
-          weight={'bold'}
+          // height={14}
+          // weight={'bold'}
+
+          // size={12}
+          // spacing={1.12}
+          // color="#B0BAC9"
           style={styles.label}
-          size={12}
-          spacing={1.12}
-          color="#B0BAC9">
+          caption
+          medium>
           {label}
         </Text>
         {rightLabel}
@@ -61,12 +65,13 @@ export default Input;
 
 const styles = StyleSheet.create({
   input: {
-    backgroundColor: 'rgba(224, 231, 255, 0.2)',
+    backgroundColor: theme.colors.input,
+    // opacity: 0.2,
     borderWidth: 0.5,
-    borderColor: '#E0E7FF',
+    borderColor: theme.colors.border,
     borderRadius: 5,
-    fontSize: 15,
-    color: '#2E384D',
+    fontSize: theme.sizes.font,
+    color: theme.colors.black,
     height: 45,
     paddingVertical: 11,
     paddingHorizontal: 16,

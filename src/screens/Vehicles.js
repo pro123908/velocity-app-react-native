@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 const Vehicles = () => {
   return (
     <View style={styles.vehicles}>
-      <Text>Vehicles Screen</Text>
+      <Text>Vehicles </Text>
     </View>
   );
 };

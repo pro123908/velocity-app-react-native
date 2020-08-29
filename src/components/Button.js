@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyleSheet, View, TouchableOpacity, Dimensions} from 'react-native';
+import {StyleSheet, TouchableOpacity, Dimensions} from 'react-native';
+import * as theme from '../constants/theme';
 
 const {width} = Dimensions.get('window');
 
@@ -19,10 +20,10 @@ export default Button;
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#2E5BFF',
-    borderRadius: 4,
+    backgroundColor: theme.colors.blue,
+    borderRadius: 5,
     height: 55,
-    paddingVertical: 10,
+    // paddingVertical: 10,
     alignItems: 'center',
     justifyContent: 'center',
   },

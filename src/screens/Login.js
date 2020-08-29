@@ -18,16 +18,17 @@ const Login = () => {
       <Block flex={2.5} center>
         <Block center>
           <Text
-            size={28}
-            color="#2E384D"
-            height={32}
-            spacing={0}
-            weight={'300'}
+            h3
+            // color="#2E384D"
+
+            // height={32}
+            // spacing={0}
+            // weight={'300'}
             style={{marginBottom: 6}}>
             Sign in to Velocity
           </Text>
 
-          <Text color="#8798AD" height={22} spacing={0} weight={'300'}>
+          <Text color="black3" paragraph>
             Please enter your credentials to proceed
           </Text>
           <Block center flex={0} style={{marginTop: 40}}>
@@ -39,17 +40,15 @@ const Login = () => {
               password
               full
               rightLabel={
-                <Text color="#8798AD" height={22}>
+                <Text color="gray" paragraph>
                   Forgot password?
                 </Text>
               }
             />
             <Button onPress={() => {}} full style={{marginBottom: 10}}>
-              <Text size={21} spacing={0} weight="bold" color="white">
-                Sign In
-              </Text>
+              <Text button>Sign In</Text>
             </Button>
-            <Text height={22} color="#8798AD">
+            <Text color="gray" paragraph>
               Don't have an account?{' '}
               <Text height={18} color="#2E5BFF">
                 Sign up
@@ -63,9 +62,3 @@ const Login = () => {
 };
 
 export default Login;
-
-const styles = StyleSheet.create({
-  Login: {
-    flex: 1,
-  },
-});
