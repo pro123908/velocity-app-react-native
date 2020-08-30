@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, TouchableOpacity, Image} from 'react-native';
+import {Image} from 'react-native';
 import Block from '../components/Block';
 import Text from '../components/Text';
 import Input from '../components/Input';
