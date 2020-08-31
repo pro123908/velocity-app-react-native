@@ -1,11 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
+import Block from '../components/Block';
+import Text from '../components/Text';
+import Input from '../components/Input';
+import Button from '../components/Button';
 
 const Forgot = () => {
   return (
-    <View style={styles.Forgot}>
+    <Block center middle>
       <Text>Forgot</Text>
-    </View>
+    </Block>
   );
 };
 

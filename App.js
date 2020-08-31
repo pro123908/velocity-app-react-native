@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import StackNavigator from './src/navigation/StackNavigator';
+import DrawerNavigator from './src/navigation/DrawerNavigator';
 
 const App = () => {
   return (

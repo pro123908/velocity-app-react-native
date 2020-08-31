@@ -1,12 +1,23 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
-const Block = ({children, flex, center, middle, style, ...props}) => {
+const Block = ({
+  children,
+  flex,
+  row,
+  center,
+  middle,
+  space,
+  style,
+  ...props
+}) => {
   const blockStyles = [
     styles.block,
     flex && {flex},
     center && styles.center,
     middle && styles.middle,
+    space && {justifyContent: `space-${space}`},
+    row && styles.row,
     style,
   ];
   return (
@@ -22,4 +33,5 @@ const styles = StyleSheet.create({
   block: {flex: 1},
   center: {alignItems: 'center'},
   middle: {justifyContent: 'center'},
+  row: {flexDirection: 'row'},
 });

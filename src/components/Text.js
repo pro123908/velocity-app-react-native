@@ -9,6 +9,8 @@ const Typography = ({
   height,
   spacing,
   weight,
+  bold,
+  light,
   style,
   children,
   h1,
@@ -47,6 +49,8 @@ const Typography = ({
     height && {lineHeight: height},
     spacing && {letterSpacing: spacing},
     weight && {fontWeight: weight},
+    bold && styles.bold,
+    light && styles.light,
     center && styles.center,
     h1 && styles.h1,
     h2 && styles.h2,
@@ -75,6 +79,14 @@ const styles = StyleSheet.create({
     fontFamily: 'Rubik-Regular',
     fontSize: 14,
     color: theme.colors.black,
+  },
+
+  bold: {
+    fontFamily: 'Rubik-Bold',
+  },
+
+  light: {
+    fontFamily: 'Rubik-Light',
   },
 
   blue: {

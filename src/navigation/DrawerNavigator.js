@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Settings} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Overview from '../screens/Overview';
